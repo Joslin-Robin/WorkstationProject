@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Workstation| @ViewBag.Title</title>
+	@Styles.Render("~/Content/css")
+	@Styles.Render("~/font-awesome/css")
+	<link href="~/Content/style.css" rel="stylesheet" />
+	<link href="~/Content/custom.css" rel="stylesheet" />
+	@Scripts.Render("~/bundles/modernizr")
+	@if (IsSectionDefined("Styles"))
+	{@RenderSection("Styles", required: false)}
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	@Scripts.Render("~/bundles/ie")
+	<![endif]-->
+	<style>
+		#custom-nav {
+			-webkit-box-shadow: 20px 20px 20px #FC0;
+			-moz-box-shadow: 20px 20px 20px #FC0;
+			box-shadow: 20px 20px 20px #FC0;
+			z-index: 999;
+		}
+		body {
+			background-color: #EBEBEB;
+			padding-top: 0px;
+		}
+	</style>
+</head>
+<body>
+	<section id="container-main">
+
+		<div id="container-heading" class="sticky-top mb-3">
+			@Html.Partial("_Header")
+
+		</div>
+		<section id="container-body">
+			<section id="container-content">
+				@if (IsSectionDefined("Actions"))
+				{@RenderSection("Actions", required: false)}
+				@RenderBody()
+
+			</section>
+		</section>
+	</section>
+	@if (IsSectionDefined("Messages"))
+	{@RenderSection("Messages", required: false)}
+
+	@Scripts.Render("~/bundles/jquery")
+	@Scripts.Render("~/bundles/bootstrap")
+	@RenderSection("scripts", required: false)
+
+	<!-- Footer -->
+	<footer class="page-footer font-small mdb-color pt-4">
+
+		<!-- Footer Links -->
+		<div class="container text-center text-md-left">
+
+			<!-- Footer links -->
+			<!-- Footer links -->
+
+			<hr>
+
+			<!-- Grid row -->
+			<div class="row d-flex align-items-center">
+
+				<!-- Grid column -->
+				<div class="col-md-7 col-lg-8">
+
+					<!--Copyright-->
+					<p class="text-center text-md-left">
+						© 2019 Copyright:
+						<a href="#">
+							<text>Workstation</text>
+						</a>
+					</p>
+
+				</div>
+
+			</div>
+			<!-- Grid row -->
+
+		</div>
+		<!-- Footer Links -->
+
+	</footer>
+	<!-- Footer -->
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

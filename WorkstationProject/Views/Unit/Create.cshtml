@@ -1,0 +1,319 @@
+﻿
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function () {
+		$("#UnitType").change(function () {
+			$(this).find("option:selected").each(function () {
+				var optionValue = $(this).attr("value");
+				if (optionValue) {
+					$(".section").not("." + optionValue).hide();
+					$("." + optionValue).show();
+				} else {
+					$(".section").hide();
+				}
+			});
+		}).change();
+	});
+</script>
+<div class="container-fluid">
+	<form id="form-unit" action="" method="post">
+		<div class="row">
+			<div class="col-12">
+				<div class="card">
+					<div class="card-body">
+						<h3>New Unit</h3>
+						<div class="d-flex flex-row">
+							<div class="form-group pr-3">
+								<label class="col-form-label font-weight-bold">Type</label>
+								<select class="form-control next" id="UnitType" name="">
+									<option value="NULL">Select</option>
+									<option value="Workstation">Workstation</option>
+									<option value="SmartPhone">Smart Phone</option>
+									<option value="IpPhone">IP Phone</option>
+									<option value="Printer">Printer</option>
+									<option value="Monitor">Monitor</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label class="col-form-label font-weight-bold">Asset No</label>
+								<input id="" type="number" class="form-control" name="" />
+							</div>
+						</div>
+						<div class="Workstation section">
+							<div class="d-flex flex-row ">
+								<div class="d-flex flex-row">
+									<div class="form-group w-50  pr-3">
+										<label class="col-form-label Workstation font-weight-bold">CPU</label>
+										<input id="" type="text" class="form-control" name="" />
+									</div>
+									<div class="form-group w-50 pr-3">
+										<label class="col-form-label font-weight-bold">Motherboard</label>
+										<input id="" class="form-control" type="text" name="" />
+									</div>
+									<div class="form-group w-25 pr-3">
+										<label class="col-form-label font-weight-bold">Form Factor</label>
+										<select class="form-control next" id="" name="">
+											<option value="N/A">Select </option>
+											<option value="Fullatx">Full atx</option>
+											<option value="microatx">micro atx</option>
+											<option value="itx">itx</option>
+											<option value="mini">mini</option>
+										</select>
+									</div>
+									<div class="form-group w-25 pr-3">
+										<label class="col-form-label font-weight-bold">Storage Size(GB)</label>
+										<input id="" type="number" class="form-control" name="" />
+									</div>
+									<div class="form-group w-25 pr-3">
+										<label class="col-form-label font-weight-bold">Storage Size(GB)</label>
+										<input id="" type="number" class="form-control" name="" />
+									</div>
+									<div class="form-group w-25 pr-3">
+										<label class="col-form-label font-weight-bold">Memory Size</label>
+										<select class="form-control next" id="" name="">
+											<option value="N/A">Select </option>
+											<option value="2GB">2GB</option>
+											<option value="4GB">4GB</option>
+											<option value="8GB">8GB</option>
+											<option value="16GB">16GB</option>
+											<option value="32GB">32GB</option>
+											<option value="64GB">64GB</option>
+
+										</select>
+									</div>
+									<div class="form-group  w-25 pr-3  ">
+										<label class="col-form-label font-weight-bold">Memory Class</label>
+										<select class="form-control next" id="" name="">
+											<option value="N/A">Select</option>
+											<option value="DDR3 ">DDR3 </option>
+											<option value="DDR4">DDR4 </option>
+
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="d-flex flex-row Workstation">
+								<div class="form-group pr-3 w-50">
+									<label class="col-form-label font-weight-bold">Graphics Card</label>
+									<input id="" type="text" class="form-control" name="" />
+								</div>
+								<div class="form-group pr-3 w-50">
+									<label class="col-form-label font-weight-bold">Graphics Memory Size</label>
+									<select class="form-control next" id="" name="">
+										<option value="N/A">Select </option>
+										<option value="2GB">2GB</option>
+										<option value="4GB">4GB</option>
+										<option value="8GB">8GB</option>
+										<option value="16GB">16GB</option>
+										<option value="32GB">32GB</option>
+										<option value="64GB">64GB</option>
+									</select>
+								</div>
+								<div class="form-group pr-3 w-50">
+									<label class="col-form-label font-weight-bold">Graphics Memory Allocation Type</label>
+									<div class="form-group row pr-4 ml-2">
+										<div class=" d-flex col-form-label">
+											<div class="form-check">
+												<label class="form-check-label  mr-2" for="radiochk">
+													<input type="radio" name="" class="active Type" id="" value="1" /> Dedicated
+												</label>
+											</div>
+											<div class="form-check">
+												<label class="form-check-label mr-2" for="radiochk1">
+													<input type="radio" id="" name="" class="" value="2" /> Shared
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="form-group pr-3 w-25">
+									<label class="col-form-label font-weight-bold">Power Supply</label>
+									<input id="" type="text" class="form-control" name="" />
+								</div>
+								<div class="form-group  pr-3 w-25">
+									<label class="col-form-label font-weight-bold">Voltage Capacity</label>
+									<input id="" type="number" class="form-control" name="" />
+								</div>
+								<div class="form-group pr-3 w-25">
+									<label class="col-form-label font-weight-bold">Case</label>
+									<input id="" type="text" class="form-control" name="" />
+								</div>
+								<div class="form-group pr-3 w-25">
+									<label class="col-form-label font-weight-bold">Form Factor</label>
+									<select class="form-control next" id="" name="">
+										<option value="N/A">Select </option>
+										<option value="Fullatx">Full Tower</option>
+										<option value="microatx">micro atx</option>
+										<option value="itx">itx</option>
+										<option value="mini">mini</option>
+
+									</select>
+
+								</div>
+							</div>
+							<div class="d-flex flex-row Workstation">
+								<div class="form-group  pr-3 w-75">
+									<label class="col-form-label font-weight-bold">Operating System</label>
+									<input id="" type="text" class="form-control" name="" />
+								</div>
+								<div class="form-group pr-3 w-75">
+									<label class="col-form-label font-weight-bold">Admin Username</label>
+									<input id="" class="form-control" type="text" name="" />
+								</div>
+								<div class="form-group pr-3 w-75">
+									<label class="col-form-label font-weight-bold">Admin password</label>
+									<input id="" type="password" class="form-control" name="" />
+								</div>
+								<div class="form-group pr-3 w-50">
+									<label class="col-form-label font-weight-bold">IP Address</label>
+									<input id="" type="number" class="form-control" name="" />
+								</div>
+								<div class="form-group pr-3 w-50">
+									<label class="col-form-label font-weight-bold">MAC Address</label>
+									<input id="" type="number" class="form-control" name="" />
+								</div>
+								<div class="form-group pr-3 w-100">
+									<label class="col-form-label font-weight-bold">Currently Used By</label>
+									<input id="" type="text" class="form-control" name="" />
+								</div>
+							</div>
+						</div>
+						<div class="IpPhone section">
+							<div class="d-flex flex-row ">
+								<div class="form-group  pr-3 w-75">
+									<label class="col-form-label font-weight-bold">Description</label>
+									<input id="" type="text" class="form-control" name="" />
+								</div>
+								<div class="form-group pr-3 w-75">
+									<label class="col-form-label font-weight-bold">Phone Type</label>
+									<select class="form-control next" id="" name="">
+										<option value="N/A">Select </option>
+										<option value="Physical">Physical</option>
+									</select>
+								</div>
+								<div class="form-group pr-3 w-75">
+									<label class="col-form-label font-weight-bold">Serial Number</label>
+									<input id="" type="text" class="form-control" name="" />
+								</div>
+								<div class="form-group pr-3 w-50">
+									<label class="col-form-label font-weight-bold">IP Address</label>
+									<input id="" type="number" class="form-control" name="" />
+								</div>
+								<div class="form-group pr-3 w-50">
+									<label class="col-form-label font-weight-bold">MAC Address</label>
+									<input id="" type="number" class="form-control" name="" />
+								</div>
+								<div class="form-group pr-3 w-100">
+									<label class="col-form-label font-weight-bold">Extension number</label>
+									<input id="" type="text" class="form-control" name="" />
+								</div>
+							</div>
+						</div>
+
+
+						<div class="row Monitor section">
+							<div class="col-12">
+								<div class="d-block">
+									<div class="d-flex  ">
+										<div class="form-group pr-3" style="max-width:20%; min-width:20%">
+											<label class="col-form-label font-weight-bold">Description</label>
+											<input id="" type="text" class="form-control" name="" />
+										</div>
+										<div class="form-group pr-3" style="width:100px;">
+											<label class="col-form-label font-weight-bold">Size(in.)</label>
+											<input id="" type="number" class="form-control" name="" />
+										</div>
+										<div class="form-group pr-3" style="max-width:10%; min-width:10%">
+											<label class="col-form-label font-weight-bold">Resolution (W*H)</label>
+											<input id="" type="number" class="form-control" name="" />
+										</div>
+
+										<div class="form-group pr-3" style="max-width:20%; min-width:20%">
+											<label class="col-form-label font-weight-bold">Serial Number</label>
+											<input id="" type="number" class="form-control" name="" />
+										</div>
+										<div class="form-group flex-fill pr-3">
+											<label class="col-form-label font-weight-bold">Currently Being Used By</label>
+											<input id="" type="text" class="form-control" name="" />
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+									<div class="SmartPhone section">
+										<div class="d-flex flex-row SmartPhone box">
+											<div class="form-group  pr-3 w-50">
+												<label class="col-form-label font-weight-bold">Description</label>
+												<input id="" type="text" class="form-control" name="" />
+											</div>
+											<div class="form-group pr-3 w-50">
+												<label class="col-form-label font-weight-bold">Operating System</label>
+												<div class="form-group row pr-4 ml-2">
+													<div class=" d-flex col-form-label">
+														<div class="form-check">
+															<label class="form-check-label  mr-2" for="radiochk">
+																<input type="radio" name="Type" class="active Type" id="Dedicated" value="1" /> Apple iOS
+															</label>
+														</div>
+														<div class="form-check">
+															<label class="form-check-label mr-2" for="radiochk1">
+																<input type="radio" id="Shared" name="Type" class="Type" value="2" /> Android
+															</label>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="form-group pr-3 w-50">
+												<label class="col-form-label font-weight-bold">Operating System version</label>
+												<input id="" type="text" class="form-control" name="" />
+											</div>
+											<div class="form-group pr-3 w-50">
+												<label class="col-form-label font-weight-bold">Serial Number</label>
+												<input id="" type="number" class="form-control" name="" />
+											</div>
+
+										</div>
+									</div>
+									<div class="Printer section">
+										<div class="d-flex flex-row Monitor box">
+											<div class="form-group  pr-3 w-75">
+												<label class="col-form-label font-weight-bold">Description</label>
+												<input id="" type="text" class="form-control" name="" />
+											</div>
+											<div class="form-group pr-3 w-50">
+												<label class="col-form-label font-weight-bold">Ink Type</label>
+												<select class="form-control next" id="" name="">
+													<option value="N/A">Select </option>
+													<option value="3-in-1_USB">3-in-1 USB</option>
+												</select>
+											</div>
+											<div class="form-group pr-3 w-75">
+												<label class="col-form-label font-weight-bold">Functionality</label>
+												<select class="form-control next" id="" name="">
+													<option value="N/A">Select </option>
+													<option value="Continous">Continous</option>
+												</select>
+											</div>
+											<div class="form-group pr-3 w-50">
+												<label class="col-form-label font-weight-bold">Serial Number</label>
+												<input id="" type="number" class="form-control" name="" />
+											</div>
+											<div class="form-group pr-3 w-50">
+												<label class="col-form-label font-weight-bold">IP Address</label>
+												<input id="" type="number" class="form-control" name="" />
+											</div>
+											<div class="form-group pr-3 w-50">
+												<label class="col-form-label font-weight-bold">MAC Address</label>
+												<input id="" type="number" class="form-control" name="" />
+											</div>
+
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+	</form>
+</div>
+
+
